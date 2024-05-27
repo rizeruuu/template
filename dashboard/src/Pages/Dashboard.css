@@ -1,0 +1,37 @@
+.loginBody {
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-image: url('./K-BG.jpg');
+  background-size: cover;
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  margin-top: 20px;
+
+}
+
+.custom-modal {
+  background-color: white;
+}

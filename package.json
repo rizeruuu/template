@@ -1,0 +1,23 @@
+{
+  "name": "student-information-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": " "
+  },
+  "author": "Ananayo, Kevin Klein V.",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "mongodb": "^6.6.2",
+    "mongoose": "^8.4.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.1",
+    "sharp": "^0.33.4"
+  },
+  "description": ""
+}

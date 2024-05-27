@@ -1,0 +1,66 @@
+[
+  {
+    "ID": "1",
+    "First": "test ",
+    "Last": "test",
+    "Middle": "test",
+    "Course": "IT",
+    "Year": "3"
+  },
+  {
+    "ID": "3",
+    "First": "asd",
+    "Last": "ewr",
+    "Middle": "",
+    "Course": "ECE",
+    "Year": "2"
+  },
+  {
+    "ID": "45678567",
+    "First": "Eh. t-log",
+    "Last": "nb-u",
+    "Middle": "kjg",
+    "Course": "criminal nalang",
+    "Year": "4"
+  },
+  {
+    "ID": "89877346",
+    "First": "ma. fus",
+    "Last": "ra-wr",
+    "Middle": "",
+    "Course": "npa",
+    "Year": "5"
+  },
+  {
+    "ID": "37633210",
+    "First": "ma. dik",
+    "Last": "kayaten-jusko",
+    "Middle": "pakawanendak apo",
+    "Course": "Bachelor of Science in Gastos",
+    "Year": "1"
+  },
+  {
+    "ID": "73826530",
+    "First": "lara",
+    "Last": "lala",
+    "Middle": "saquing",
+    "Course": "BS in Pugrot",
+    "Year": "3"
+  },
+  {
+    "ID": "12345678",
+    "First": "sxff",
+    "Last": "fytvgh",
+    "Middle": "",
+    "Course": "cs",
+    "Year": "5"
+  },
+  {
+    "ID": "35675687",
+    "First": "mhgnbv",
+    "Last": "dgtyjgkuugjthg",
+    "Middle": "",
+    "Course": "dftyu",
+    "Year": "3"
+  }
+]
