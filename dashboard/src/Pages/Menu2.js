@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Grid,
+  Box,
 } from "@mui/material";
 import "./Menu2.css";
 
 function Menu2() {
   const navigate = useNavigate();
   const [allImage, setAllImage] = useState([]);
-  const [selectedDish, setSelectedDish] = useState(null); // State to store the selected dish
 
   useEffect(() => {
     const storedAdmin = localStorage.getItem("adminID");
@@ -38,55 +38,36 @@ function Menu2() {
     }
   };
 
-  const handleViewDetails = (dish) => {
-    setSelectedDish(dish); // Set the selected dish when the button is clicked
-  };
-
-  const handleCloseDialog = () => {
-    setSelectedDish(null); // Reset the selected dish when the dialog is closed
-  };
-
   return (
     <div className="main">
       <h3>Kan Gei's Special Offer</h3>
-      <div className="image-container">
-        {allImage.map((data, index) => {
-          const imageUrl = `data:image/jpeg;base64,${data.image}`;
-          return (
-            <div
-              key={index}
-              className="image-item"
-              onClick={() => handleViewDetails(data)}
-            >
-              <img src={imageUrl} alt={`Image ${index}`} />
-            </div>
-          );
-        })}
-      </div>
-      <Dialog open={!!selectedDish} onClose={handleCloseDialog}>
-        <DialogTitle >
-          <b>{selectedDish && selectedDish.Name}</b>
-        </DialogTitle>
-        <br/>
-        <DialogContent>
-          {selectedDish && (
-            <>
-              <img
-                src={`data:image/jpeg;base64,${selectedDish.image}`}
-                alt={selectedDish.Name}
-                style={{ width: "200px", height: "200px", borderRadius: "10px"}}
+      <Grid container spacing={2}>
+        {allImage.map((data, index) => (
+          <Grid key={index} item xs={12} sm={6} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                image={`data:image/jpeg;base64,${data.image}`}
+                alt={`Image ${index}`}
+                style={{ height: 200 }}
               />
-              <div>{selectedDish.Description}</div>
-              <div>₱&nbsp;{selectedDish.Price}</div>
-            </>
-          )}
-        </DialogContent>
-        <DialogActions>
-          <Button variant="contained" onClick={handleCloseDialog} color="primary">
-            Close
-          </Button>
-        </DialogActions>
-      </Dialog>
+              <CardContent>
+                <Typography variant="body2" gutterBottom>
+                  <b>{data.Name}</b>
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  ₱{data.Price}
+                </Typography>
+                <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                  <Typography variant="body2" gutterBottom>
+                    Description: {data.Description}
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 }

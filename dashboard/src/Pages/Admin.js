@@ -243,7 +243,7 @@ function Admin() {
                 </Button>
                 <Button
                   variant="contained"
-                  color="secondary"
+                  color="primary"
                   onClick={() => openDeleteDialog(data._id)}
                 >
                   Delete
@@ -307,7 +307,7 @@ function Admin() {
           <Button onClick={closeDeleteDialog} color="primary">
             Cancel
           </Button>
-          <Button onClick={() => deleteImage(deleteId)} color="secondary">
+          <Button onClick={() => deleteImage(deleteId)} color="primary">
             Delete
           </Button>
         </DialogActions>
